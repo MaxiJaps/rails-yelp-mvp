@@ -1,0 +1,10 @@
+<br>
+<br>
+<h1>Restaurants</h1>
+<%= link_to "Add a restaurant!", new_restaurant_path %>
+
+<ul class = "p-0 my-2">
+  <% @restaurants.each do |restaurant| %>
+    <li class= "list-group-item text-center my-2"><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <% end %>
+</ul>
